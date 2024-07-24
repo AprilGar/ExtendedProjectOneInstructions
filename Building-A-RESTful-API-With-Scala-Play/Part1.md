@@ -16,7 +16,7 @@ From the [Template](https://github.com/AprilGar/ExtendedProjectOneTemplate):
 
 2. Navigate in your terminal to an appropriate location on your computer
 
-3. Enter `git clone "PASTE THE SSH LINK"`, e.g. `git clone git@github.com:MercatorDigital/play-template.git`
+3. Enter `git clone "PASTE THE SSH LINK"`, e.g. `git clone git@github.com:AprilGar/ExtendedProjectOneTemplate.git`
 
 
 4. From **IntelliJ**:
@@ -43,16 +43,16 @@ We want to track changes to the project using git. Since we cloned this repo we 
 2. Go to the command line/terminal:
    * We need to tell git where the remote GitHub repository is, so that we can push up changes. Run the following, substituting with your GitHub username and newly created project name
    * `git remote rename origin upstream` (The old origin is now renamed to upstream)
-   * `git remote add origin git@github.com:<username>/<repo-name>.git` (A new origin is added, your github!)
-   * e.g. `git remote add origin git@github.com:MercatorDigital/play-template.git`
+   * `git remote add origin git@github.com:username/repo-name.git` (A new origin is added, your github!)
+   * e.g. `git remote add origin git@github.com:AprilGar/Exercise1Template.git`
 
-3. Run `git remote -v` to check the remote is correct
+3. Run `git remote -v` to check the remote is correct (If this isn't pointing to your GitHub try the above again, if it still doesn't work, reach out to your trainer!)
 
 4. Run `git status`, and you can now see there are various files git has picked up but is not yet tracking any changes and only recognises a whole bunch of new folders and files.
 
-5. Run `git add .` to add all files in red to a 'staging area' in preparation for a final commit
+5. Run `git add .` to add all files in red to a 'staging area' in preparation for a final commit.
 
-6. To make a commit, run `git commit -m "example message"` (Think of an appropriate message for the changes you've made)
+6. To make a commit, run `git commit -m "example message"` (Think of an appropriate message for the changes you've made, remember present tense.)
 
 7. Push your new commit up to main `git push origin main` (Note: there are two places we 'can' push to, the old location, `upstream`, and your new one, `origin`.)
 
@@ -132,29 +132,29 @@ To add a new library dependency to your project, open up `build.sbt`
     ```
 6. Run tests again and check everything is working okay
 
-7. Add the changed files to git **on a new branch**, do a git commit briefly detailing what you have changed, then push the branch up to GitHub (hint: `git push origin <branch-name>`)
+7. Add the changed files to git **on your new branch**, do a git commit briefly detailing what you have changed, then push the branch up to GitHub (hint: `git push origin <branch-name>`).
 
 8. Navigate to GitHub and find your new branch and view the changes you have made. Once you're happy with them then, a pull request can be made to merge the branch into main.
 
 ## Running the new Application
-1. Bring up the Terminal window in IntelliJ and run `sbt run`
+1. Bring up the Terminal window in IntelliJ and run `sbt run`.
 
-2. Your project will compile and run by default on port `9000`
+2. Your project will compile and run by default on port `9000`.
 
-3. Navigate to `localhost:9000` in your browser and you should see a greeting message from Play
+3. Navigate to `localhost:9000` in your browser and you should see a greeting message from Play.
 
-4. Where is this text coming from? Use the files in the `controllers` & `views` packages to investigate. More in-depth frontend development will be covered in a separate tutorial.
+4. Where is this text coming from? Use the files in the `controllers` & `views` packages to investigate. More in-depth frontend development will come later! 
 
-5. Try customising both the header and page title text in those files to your own message
+5. Try customising both the header and page title text in those files to your own message.
 
-6. Use `control + C` in the terminal to stop the server running 
+6. Use `control + C` in the terminal to stop the server running.
 
 ## Running Tests
 1. Run the command `sbt test` in the terminal. This command runs all tests that were set up by the Play application seed, i.e. in `test/controllers/HomeControllerSpec`.
 
-2. You should get failed tests after changing the page title text above
+2. You should get failed tests after changing the page title text above.
 
-3. Alter the tests so that they now pass
+3. Alter the tests so that they now pass.
 
 **Note: this isn't [Test-Driven Development](https://www.agilealliance.org/glossary/tdd/#q=~(infinite~false~filters~(postType~(~%27page~%27post~%27aa_book~%27aa_event_session~%27aa_experience_report~%27aa_glossary~%27aa_research_paper~%27aa_video)~tags~(~%27tdd))~searchTerm~%27~sort~false~sortDirection~%27asc~page~1))! Consider how you could have done the above tasks using a TDD approach.**
 
