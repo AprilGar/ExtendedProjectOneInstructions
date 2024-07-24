@@ -11,7 +11,7 @@ These should all be installed as part of your laptop setup.
 ## Generating a Play/Scala application seed 
 We'll first generate a template for your Play application that gives you the initial setup you need. **Note: This won't compile until the dependencies have been added later**
 
-From the [Template](https://github.com/MercatorDigital/play-template):
+From the [Template](https://github.com/AprilGar/ExtendedProjectOneTemplate):
 1. Select code → copy the SSH
 
 2. Navigate in your terminal to an appropriate location on your computer
