@@ -1,6 +1,6 @@
 # Building a RESTful API with Scala and Play
 
-*Based around a tutorial from [here](https://spr.com/building-a-simple-rest-api-with-scala-play-part-1/), [here](https://spr.com/building-a-simple-rest-api-with-scala-play-part-2/) & [here](https://justinrodenbostel.com/2016/01/27/building-a-simple-rest-api-with-scala-play-part-3/).*
+*Based around a tutorial from [here](https://spr.com/building-a-simple-rest-api-with-scala-play-part-1/) and [here](https://spr.com/building-a-simple-rest-api-with-scala-play-part-2/).*
 
 ## This Tutorial
 This tutorial walks you through the creation of an API that can store, retrieve and update data in a Mongo database. It covers these main concepts and technologies, some more in depth than others:
