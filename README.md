@@ -11,14 +11,12 @@ This tutorial walks you through the creation of an API that can store, retrieve 
 * git and GitHub
 * SBT
 * Mockito/MockFactory
-* CURL
-
-## Previous Knowledge
-Its recommended you have some experience with the following, although it isn't completely required:
-* Scala (tutorial [here](https://www.scala-exercises.org/scala_tutorial)), Java or similar, along with unit testing
+* CURL 
 * HTTP request methods and response statuses (brief guide [here](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177))
 
-Some of the sections are purposefully vague and get more challenging as you progress. This is intended - your colleagues, your Teams dev channel, Stack Overflow, Google, GitHub are all valuable resources!
+Some of the sections are purposefully vague and get more challenging as you progress. This is intended - your peers, your Teams Academy channel, Stack Overflow, Google, GitHub, your notes and your trainer are all valuable resources! 
+
+Remember to utilise the 4B's methodology when something isn't going quite to plan: brain, book, buddy, boss. 
 
 ## Why Scala & Play?
 Reactive Programming is based around building applications that can meet the diverse demands of modern environments. Four main characteristics:
@@ -49,8 +47,8 @@ For this tutorial, we'll be using [the HMRC mongo](https://github.com/hmrc/hmrc-
 To wrap it all up, we’ll be using Scala Test and MockFactory to unit test our application. Scala Test allows us to write test cases in the style of behaviour-driven development and highlights the flexibility of Scala and how it an easily be used to create a domain-specific language.
 
 ## Sections
-* [Part 1](Part1.md) 
-* [Part 2](Part2.md) 
-* [Part 3](Part3.md) 
-* [Part 4](Part4.md)
-* [Part 5](Part5.md)
+* [Part 1](Building-A-RESTful-API-With-Scala-Play/Part1.md) 
+* [Part 2](Building-A-RESTful-API-With-Scala-Play/Part2.md) 
+* [Part 3](Building-A-RESTful-API-With-Scala-Play/Part3.md) 
+* [Part 4](Building-A-RESTful-API-With-Scala-Play/Part4.md)
+* [Part 5](Building-A-RESTful-API-With-Scala-Play/Part5.md)
