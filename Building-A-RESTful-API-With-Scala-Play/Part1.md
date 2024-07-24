@@ -61,17 +61,17 @@ We want to track changes to the project using git. Since we cloned this repo we 
 9. Hit the button **Add a README** if a README doesn't exist.
 
 GitHub supports making direct changes to your repo within the web UI itself. This isn't generally recommended as you're unable to run tests to ensure your changes are working okay, but we can use this feature just to create a dummy README.md file:
-1. Add a commit comment describing what you're doing
+1. Add a commit comment describing what you're doing.
 
-2. Commit the new file
+2. Commit the new file.
 
-3. Back to the command line, run git pull to pull down the new README
+3. Back to the command line, run git pull to pull down the new README.
 
-4. You should get an error from git, informing you that you need to give it an upstream origin for the master branch
+4. You should get an error from git, informing you that you need to give it an upstream origin for the master branch.
 
 5. Using the help text git gives you, **try and fix this error**
 
-6. Run git pull again and check you now see the README.md file
+6. Run git pull again and check you now see the README.md file.
 
 **From this point onwards, we'll now use branches to make changes, rather than committing straight to master (big no no!)**
 
@@ -91,7 +91,7 @@ We're going to first change the version of Play framework we're using so that it
 
 In your project run `sbt test` to check everything works and your app downloads the versions correctly. If not, ensure:
 
-1. Find the version of `sbt-plugin` and change it to **2.8.18**
+1. Find the version of `sbt-plugin` and change it to **2.8.19**
 
 2. Find the `scala` version and change it to **2.13.8**
 
