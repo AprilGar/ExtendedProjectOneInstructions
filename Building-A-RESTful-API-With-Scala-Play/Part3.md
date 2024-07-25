@@ -198,13 +198,13 @@ A DatabaseException was thrown. This needs to be caught with error handling.
 ### Viewing your database
 There are a few ways you can view your newly created data in Mongo. One way is to download an app that provides a useful UI.
 
-1. Download and install [Robo 3T](https://robomongo.org/)
+1. Download and install [Studio 3T](https://studio3t.com/download/) if you didn't do this as part of your laptop set up.
 
 2. Once installed, open the app and you should be able to connect with the default settings.
 
-3. You should see a database with the same name as your project (set in `application.conf`). Click this
+3. You should see a database with the same name as your project (set in `application.conf`). Click this.
 
-4. There should be a collection called `data` (set in `DataRepository`). Click this
+4. There should be a collection called `data` (set in `DataRepository`). Click this.
 
 5. You should see an entry for the data you created!
 
@@ -221,6 +221,6 @@ There are a few ways you can view your newly created data in Mongo. One way is t
 5. Hit the `DELETE /api/:id` route with a CURL command to delete a specific item. How can you specify the DELETE HTTP method?
 
 Now that we have a basic repository, we need to populate it. 
-Instead of entering all this information yourself, lets use steal from an existing database!
+Instead of entering all this information yourself, lets use this from an existing database!
 
 ## [Part 4](Part4.md)
