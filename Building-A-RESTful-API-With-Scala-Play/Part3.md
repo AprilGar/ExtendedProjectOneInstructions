@@ -6,7 +6,9 @@ but for now lets see if our controller and repository are working.
 
 ## Building the application
 
-Go back to your `ApplicationControllerSpec`. Make it extend `BaseSpecWithApplication`, go ahead and navigate to this trait to find
+Go back to your `ApplicationControllerSpec`. Make it extend `BaseSpecWithApplication`. 
+
+Command and click on `BaseSpecWithApplication`, this will navigate you to this traits information. You will see: 
 
 ```scala
 trait BaseSpec extends AnyWordSpec with Matchers
