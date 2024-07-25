@@ -49,7 +49,7 @@ This is something that is **not** provided by Play, and it just an example to he
 * `fakeRequest` and `fakeApplication` use Guice to help construct an instance of the application being called
 * Similarly, `buildPost` and `buildGet` are methods we can use in the tests to pass fake requests to the controller
 
-Inside `ApplicationControllerSpec`, create an instance of the controller above all tests:
+Back to your code. Inside `ApplicationControllerSpec`, create an instance of the controller above all tests:
 ```scala
 val TestApplicationController = new ApplicationController(
     repository,
