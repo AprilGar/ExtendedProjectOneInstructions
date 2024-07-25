@@ -221,6 +221,6 @@ There are a few ways you can view your newly created data in Mongo. One way is t
 5. Hit the `DELETE /api/:id` route with a CURL command to delete a specific item. How can you specify the DELETE HTTP method?
 
 Now that we have a basic repository, we need to populate it. 
-Instead of entering all this information yourself, lets use this from an existing database!
+Instead of entering all this information yourself, we will use an existing database!
 
 ## [Part 4](Part4.md)
