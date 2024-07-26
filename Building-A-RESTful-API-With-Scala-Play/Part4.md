@@ -13,7 +13,7 @@ communicating down stream with other APIs/services. We will use connectors for t
     libraryDependencies += ws
     ```
 3. WS client uses Play specific classes in the request and response building.
-   We can access this in this through dependency injection, i.e.
+   We can access this in this through dependency injection. Add the below into your new `LibraryConnector`.
 
     ```scala
    class LibraryConnector @Inject()(ws: WSClient) {
@@ -45,7 +45,7 @@ communicating down stream with other APIs/services. We will use connectors for t
    via the controller, however this could lead to a messy controller that is hard to refactor if changes later come (They almost always do!).
    Therefore, we need to make another package in app called `services`.
    * Right-click the new services package → New → Scala Class and give this a basic name like `ApplicationService`.
-   * You're service should inject the connector so we can access out `.get[Reponse]()` method that we just made
+   * You're service should inject the connector so we can access out `.get[Reponse]()` method. Add in: 
    ```scala
    @Singleton
    class LibraryService @Inject()(connector: LibraryConnector) {
