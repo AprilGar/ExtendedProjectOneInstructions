@@ -12,7 +12,7 @@ we are going to use mocks to perform unit tests.
     class LibraryServiceSpec extends BaseSpec with MockFactory with ScalaFutures with GuiceOneAppPerSuite
     ```
 
-2. Next we need to create an instance of our service in the class
+2. Next we need to create an instance of our service in the class:
     ```scala
     val mockConnector = mock[LibraryConnector]
     implicit val executionContext: ExecutionContext = app.injector.instanceOf[ExecutionContext]
@@ -21,12 +21,12 @@ we are going to use mocks to perform unit tests.
    We've created an `ExecutionContext` class in the same way as before, but our `LibraryConnector` is different.
 
     ### Why?
-   * We explicitly call methods on the `LibraryConnector` class in the service and these methods can return **different** responses based off what you call it with
-   * We **don't** want to test our `LibraryConnector` functionality as part of this spec, we only care about the `LibraryServiceSpec`
+   * We explicitly call methods on the `LibraryConnector` class in the service and these methods can return **different** responses based off what you call it with.
+   * We **don't** want to test our `LibraryConnector` functionality as part of this spec, we only care about the `LibraryServiceSpec`.
 
-    The solution to these problems is a concept known as mocking, where you **explicitly** tell the methods in `LibraryConnector` what to return, so that you can test how your service responds independently (usually known as unit testing). In this case, instead of making a call to the Google Books API, we can pretend to have received the `gameOfThrones` JSON from the API and test the functionality of our code. 
+    The solution to these problems is a concept known as mocking, where you **explicitly** tell the methods in `LibraryConnector` what to return, so that you can test how your service responds independently (usually known as unit testing - this is what we have called it so far!). In this case, instead of making a call to the Google Books API, we can pretend to have received the `gameOfThrones` JSON from the API and test the functionality of our code. 
 
-3. Add the following layout to the `LibraryServiceSpec` and fill in the missing implementation, so it passes
+3. Add the following layout to the `LibraryServiceSpec` and fill in the missing implementation, so it passes:
     ```scala
     val gameOfThrones: JsValue = Json.obj(
         "_id" -> "someId",
@@ -57,7 +57,7 @@ we are going to use mocks to perform unit tests.
                 .returning(Future(gameOfThrones.as[???]))
                 .once()
     ```
-   , then you can most likely expect a `java.lang.NullPointerException`. 
+   ... then you can most likely expect a `java.lang.NullPointerException`. 
    This is because, although we've now created a mock[LibraryConnector], we haven't told it what to do yet.
    
    There's a couple of things to break down here:
@@ -85,9 +85,9 @@ we are going to use mocks to perform unit tests.
    }
     ```
    Right now, the connector only returns one type, `Response`, something we provide to it. 
-   We need to provide another type for it to return. Let's construct an error class `APIError`
+   We need to provide another type for it to return. Let's construct an error class `APIError`.
 
-5. Inside the models package, create this class
+5. Inside the models package, create this class:
     ```scala
     import play.api.http.Status
     
@@ -126,7 +126,7 @@ we are going to use mocks to perform unit tests.
     }
     ```
 7. Now we can adjust the connector to return "Either" a `Response` or an `APIError`. Since Futures are involved
-   here, we are going to use a helpful library called `Cats`. Add this line to your `build.sbt`
+   here, we are going to use a helpful library called `Cats`. Add this line to your `build.sbt`.
     ```scala
     libraryDependencies += ("org.typelevel"                %% "cats-core"                 % "2.3.0")
     ```
@@ -152,7 +152,7 @@ we are going to use mocks to perform unit tests.
    * So at first this was a `Future[Response]`.
    * When that doesn't work, we catch the error with the `.recover` method, this returns a type `Future[APIError]`
    * `EitherT` allows us to return either of the two, `Future[APIError]` or `Future[Response]`.
-   * Note that you cannot have `APIError[Response]` or `Response[APIError`, the syntax of `EitherT` only allows the first type,
+   * Note that you cannot have `APIError[Response]` or `Response[APIError]`, the syntax of `EitherT` only allows the first type,
      i.e. the `Future`, to be applied over the remaining two types.
    * (It is also standard to have the error as the `Left` and not the `Right` type, since the error is never right!)
 9. Our service method and controller method will be giving back errors right about now, let's change that
