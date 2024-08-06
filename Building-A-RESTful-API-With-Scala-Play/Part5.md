@@ -187,7 +187,7 @@ we are going to use mocks to perform unit tests.
 5. Add error handling to `DataRepository`, similar to how we did it to the connector. Use Eithers to return either valid data (Right) or an error (Left) to the service layer, which acts on that.
    Add tests for this to `ApplicationControllerSpec`
 
-6. Make sure that your `RepositoryService` functions as intended by using mocking. Do this with a new file called `RepositoryServiceSpec`, making sure to use Eithers where appropriate. 
+6. Make sure that your `RepositoryService` functions are working as intended by using mocking. Do this with a new file called `RepositoryServiceSpec`, making sure to use Eithers where appropriate. 
 
 7. Try mocking Mongo for the controller. This will involve a few new steps:
    * Create a `trait` in the repository class
